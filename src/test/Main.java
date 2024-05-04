@@ -1,15 +1,21 @@
-import java.util.Arrays;
+package test;
+
+import java.util.Scanner;
+import domain.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        int [][] matrix = new int[3][3];
-        int x=0;
 
-        for(int[] row:matrix)
-            Arrays.fill(row,x);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Знаходження суми елементів матриці.\n");
 
-        for(int[] row:matrix)
-            System.out.println(Arrays.toString(row));
+        System.out.print("Введіть кількість рядків матриці: ");
+        int rows = scanner.nextInt();
+        System.out.print("Введіть кількість стовпців матриці: ");
+        int columns = scanner.nextInt();
+
+        System.out.println("\nСума всіх елементів матриці = " + Solution.calculateSumOfElements(rows, columns));
+        
     }
 }
